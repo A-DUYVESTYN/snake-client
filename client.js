@@ -15,29 +15,17 @@ const connect = function () {
     console.log("Connection established");
     conn.write("Name: WHA");
 
-    // conn.write("Move: up");
-    
-    setTimeout(() => {conn.write("Move: left")}, 500);
-    setTimeout(() => {conn.write("Move: left")}, 500);
-    setTimeout(() => {conn.write("Move: down")}, 1000);
-
-    setInterval(() => {conn.write("Move: right")}, 100);
-
-    
-
+    // hardcoded movements for testing
+    // setTimeout(() => {conn.write("Move: left")}, 500);
+    // setTimeout(() => {conn.write("Move: left")}, 500);
+    // setTimeout(() => {conn.write("Move: down")}, 1000);
+    // setInterval(() => {conn.write("Move: right")}, 500);
   });
-  // movement
-  // conn.on("connect", () => {
-
-    
-
-  // });
 
   // log data received from server to the console
   conn.on("data", (data) => {
     console.log("Data received: ", data);
   });
-
 
   return conn;
 };
